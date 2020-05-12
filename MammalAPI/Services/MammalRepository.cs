@@ -4,6 +4,7 @@ using MammalAPI.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using MammalAPI.DTO;
 
 namespace MammalAPI.Services
 {
@@ -26,6 +27,12 @@ namespace MammalAPI.Services
         {
             return await _dBContext.Mammals
                 .FirstOrDefaultAsync(m => m.MammalId == id);
+        }
+
+        public async Task<Mammal> GetMammalByLifeSpan (int lifespan)
+        {
+            return await _dBContext.Mammals
+                .FirstOrDefaultAsync(m => m.Lifespan == lifespan);
         }
     }
 }

@@ -26,5 +26,11 @@ namespace MammalAPI.Controllers
         {
             return Ok(await _repository.GetMammalById(id));
         }
+
+        [HttpGet("{lifespan}")]
+        public async Task<IActionResult> GetMammalByLifeSpan(int lifespan)
+        {
+            return Ok(await _repository.GetMammalByLifeSpan(lifespan));
+        }
     }
 }
