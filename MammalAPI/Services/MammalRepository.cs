@@ -29,6 +29,17 @@ namespace MammalAPI.Services
                 .FirstOrDefaultAsync(m => m.MammalId == id);
         }
 
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         public async Task<Mammal> GetMammalByLifeSpan (int lifespan)
         {
             return await _dBContext.Mammals
